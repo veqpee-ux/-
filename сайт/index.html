@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы программирования</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>КодБайт</h1>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#courses">Курсы</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Научись программировать с нуля</h2>
+        <p>Самые востребованные курсы от практиков</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться</button>
+    </section>
+
+    <section id="courses" class="courses">
+        <h2>Наши курсы</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>Python</h3>
+                <p>Для начинающих и数据分析</p>
+                <span class="price">5 900 ₽/мес</span>
+            </div>
+            <div class="course">
+                <h3>JavaScript</h3>
+                <p>Сайты и веб-приложения</p>
+                <span class="price">6 500 ₽/мес</span>
+            </div>
+            <div class="course">
+                <h3>Java</h3>
+                <p>Корпоративная разработка</p>
+                <span class="price">6 900 ₽/мес</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Оставьте заявку</h2>
+        <form id="form">
+            <input type="text" id="name" placeholder="Имя" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="message" style="display:none; color:green;">Спасибо! Мы свяжемся с вами.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 КодБайт. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
