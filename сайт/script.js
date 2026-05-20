@@ -1,18 +1,19 @@
-document.getElementById('form').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     let name = document.getElementById('name').value.trim();
     let email = document.getElementById('email').value.trim();
     
     if (name === '' || email === '') {
-        alert('Заполните все поля');
+        alert('Пожалуйста, заполните имя и email');
         return;
     }
     
-    document.getElementById('message').style.display = 'block';
+    let msg = document.getElementById('formMessage');
+    msg.style.display = 'block';
     this.reset();
     
-    setTimeout(() => {
-        document.getElementById('message').style.display = 'none';
+    setTimeout(function() {
+        msg.style.display = 'none';
     }, 3000);
 });
