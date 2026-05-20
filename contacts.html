@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КодБайт | Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">КодБайт</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="page-title">
+        <h1>Свяжитесь с нами</h1>
+        <p>Оставьте заявку, и мы поможем подобрать курс</p>
+    </section>
+
+    <section class="contact-page">
+        <div class="contact-info-block">
+            <h2>Наши контакты</h2>
+            <p>📞 Телефон: +7 (999) 123-45-67</p>
+            <p>✉️ Email: info@kodbayt.ru</p>
+            <p>💬 Telegram: @kodbayt_support</p>
+            <p>📍 Адрес: г. Москва, ул. Программистов, д. 42</p>
+        </div>
+
+        <div class="contact-form-block">
+            <h2>Оставить заявку</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш Email" required>
+                <select id="course">
+                    <option value="">Выберите курс</option>
+                    <option>Python-разработчик</option>
+                    <option>JavaScript / Frontend</option>
+                    <option>Java-разработчик</option>
+                </select>
+                <textarea id="message" rows="4" placeholder="Ваше сообщение"></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+            <p id="formMessage" style="display: none; color: green; margin-top: 15px;">
+                Спасибо! Мы свяжемся с вами.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 КодБайт. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
