@@ -3,59 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы программирования</title>
+    <title>КодБайт | Школа программирования</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>КодБайт</h1>
+        <div class="logo">КодБайт</div>
         <nav>
             <a href="#home">Главная</a>
             <a href="#courses">Курсы</a>
-            <a href="#contact">Контакты</a>
+            <a href="#contacts">Контакты</a>
         </nav>
     </header>
 
+    <!-- Блок 1: Главная -->
     <section id="home" class="hero">
-        <h2>Научись программировать с нуля</h2>
+        <h1>Научись программировать с нуля</h1>
         <p>Самые востребованные курсы от практиков</p>
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться</button>
+        <a href="#courses" class="btn">Смотреть курсы</a>
     </section>
 
-    <section id="courses" class="courses">
-        <h2>Наши курсы</h2>
-        <div class="course-list">
-            <div class="course">
-                <h3>Python</h3>
-                <p>Для начинающих программистов</p>
-                <span class="price">5 900 ₽/мес</span>
+    <!-- Блок 2: Преимущества -->
+    <section class="features">
+        <h2>Почему выбирают нас</h2>
+        <div class="features-list">
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995572.png" alt="Опыт">
+                <h3>Опытные преподаватели</h3>
+                <p>Преподаватели из топовых IT-компаний</p>
             </div>
-            <div class="course">
-                <h3>JavaScript</h3>
-                <p>Сайты и веб-приложения</p>
-                <span class="price">6 500 ₽/мес</span>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/2997/2997504.png" alt="Проекты">
+                <h3>Реальные проекты</h3>
+                <p>Создаёшь портфолио из 4+ проектов</p>
             </div>
-            <div class="course">
-                <h3>Java</h3>
-                <p>Корпоративная разработка</p>
-                <span class="price">6 900 ₽/мес</span>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Трудоустройство">
+                <h3>Помощь с работой</h3>
+                <p>Стажировки и трудоустройство</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Оставьте заявку</h2>
-        <form id="form">
-            <input type="text" id="name" placeholder="Имя" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <button type="submit">Отправить</button>
-        </form>
-        <p id="message" style="display:none; color:green;">Спасибо! Мы свяжемся с вами.</p>
+    <!-- Блок 3: Курсы -->
+    <section id="courses" class="courses-section">
+        <h2>Наши курсы</h2>
+        <div class="courses-list">
+            <div class="course-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+                <h3>Python-разработчик</h3>
+                <p>Автоматизация, анализ данных, бэкенд</p>
+                <div class="details">4 месяца | 32 урока</div>
+                <div class="price">5 900 ₽/мес</div>
+                <a href="#contacts" class="btn-small">Записаться</a>
+            </div>
+            <div class="course-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+                <h3>JavaScript / Frontend</h3>
+                <p>Сайты, приложения, React, Vue</p>
+                <div class="details">5 месяцев | 40 уроков</div>
+                <div class="price">6 500 ₽/мес</div>
+                <a href="#contacts" class="btn-small">Записаться</a>
+            </div>
+            <div class="course-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+                <h3>Java-разработчик</h3>
+                <p>Корпоративная разработка, Android</p>
+                <div class="details">5 месяцев | 38 уроков</div>
+                <div class="price">6 900 ₽/мес</div>
+                <a href="#contacts" class="btn-small">Записаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 4: Контакты -->
+    <section id="contacts" class="contact-section">
+        <h2>Свяжитесь с нами</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Наши контакты</h3>
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ info@kodbayt.ru</p>
+                <p>💬 Telegram: @kodbayt</p>
+                <p>📍 Москва, ул. Программистов, 42</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="email" id="email" placeholder="Ваш Email" required>
+                    <select id="course">
+                        <option value="">Выберите курс</option>
+                        <option>Python-разработчик</option>
+                        <option>JavaScript / Frontend</option>
+                        <option>Java-разработчик</option>
+                    </select>
+                    <textarea id="message" rows="3" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+                <p id="formMessage" style="display: none; color: green; margin-top: 10px;">
+                    ✅ Спасибо! Мы свяжемся с вами.
+                </p>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 КодБайт. Все права защищены.</p>
+        <p>© 2025 КодБайт. Все права защищены.</p>
     </footer>
 
     <script src="script.js"></script>
